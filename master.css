@@ -2,6 +2,29 @@ body {
   margin: 0;
   background: #000;
 }
+@supports (not(gap:20)) {
+  .left-bar {
+    margin-left: 1.25rem;
+  }
+  .container {
+    margin-left: 1.875rem;;
+    margin-right: 1.875rem;
+  }
+  .item-two-photo-div {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+}
+@supports (not(position: sticky)) {
+  #mobile-logo {
+    position: static;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  #mobile-logo {
+    position: static;
+  }
+}
 #mobile-logo {
   display: none;
 }
@@ -309,6 +332,23 @@ body {
   }
 }
 @media (max-width: 767px) {
+  @supports (not(gap:20)) {
+    .left-bar {
+      margin-left: 1.25rem;
+    }
+    .container {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .item-two-photo-div {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    #item-two-middle {
+      margin-left: 3.5rem;
+      margin-right: 3.5rem;
+    }
+  }
   body {
     overflow-x: hidden;
   }
