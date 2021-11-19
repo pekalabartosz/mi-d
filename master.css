@@ -325,14 +325,6 @@ body {
   }
 }
 @media (max-width: 767px) {
-  @supports (-webkit-touch-callout: none) {
-    #mobile-logo {
-      position: static;
-    }
-    #logo {
-      position: static;
-    }
-  }
   @supports (not(gap:20)) {
     .left-bar {
       margin-left: 1.25rem;
@@ -442,4 +434,13 @@ body {
   #footage {
     padding: 1.5rem;
   }
+  @media not all and (min-resolution:.001dpcm)
+  { @supports (-webkit-appearance:none) {
+    #logo {
+      all: unset;
+      width: 85vw;
+      position: absolute;
+      bottom: 40%;
+    }
+  }}
 }
