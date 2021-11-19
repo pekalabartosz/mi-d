@@ -443,7 +443,7 @@ body {
       top: 30%;
     }
     .container-text-over {
-      z-index: 2;
+      z-index: 3;
     }
   }}
 }
