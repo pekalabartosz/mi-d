@@ -14,15 +14,8 @@ body {
     margin-left: 3.5rem;
     margin-right: 3.5rem;
   }
-}
-@supports (not(position: sticky)) {
-  #mobile-logo {
-    position: static;
-  }
-}
-@supports (-webkit-touch-callout: none) {
-  #mobile-logo {
-    position: static;
+  .footer-row a, p{
+    margin-bottom: .7rem;
   }
 }
 #mobile-logo {
@@ -332,6 +325,14 @@ body {
   }
 }
 @media (max-width: 767px) {
+  @supports (-webkit-touch-callout: none) {
+    #mobile-logo {
+      position: static;
+    }
+    #logo {
+      position: static;
+    }
+  }
   @supports (not(gap:20)) {
     .left-bar {
       margin-left: 1.25rem;
@@ -347,6 +348,9 @@ body {
     #item-two-middle {
       margin-left: 3.5rem;
       margin-right: 3.5rem;
+    }
+    .footer-row a, p{
+      margin-bottom: 0.7rem;
     }
   }
   body {
@@ -376,7 +380,7 @@ body {
     position: relative;
   }
   #logo {
-    width: 82vw;
+    width: 82w;
     margin: 0;
     position: sticky;
     top: 50%;
